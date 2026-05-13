@@ -2,7 +2,6 @@ package com.pulse.visuals.client.util;
 
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.util.math.Matrix4f;
 import net.minecraft.util.math.Vec3d;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
@@ -24,11 +23,9 @@ public class RenderUtils {
         Vector3f endVec = new Vector3f((float) end.x, (float) end.y, (float) end.z);
 
         vertexConsumer.vertex(matrix, startVec.x, startVec.y, startVec.z)
-            .color(r, g, b, a)
-            .next();
+            .color(r, g, b, a);
         vertexConsumer.vertex(matrix, endVec.x, endVec.y, endVec.z)
-            .color(r, g, b, a)
-            .next();
+            .color(r, g, b, a);
     }
 
     /**
